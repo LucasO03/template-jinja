@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block titulo %} Texto Padrão {% endblock %}</title>
+</head>
+
+<body>
+    <h1>Conteúdo padrão em todas as páginas</h1>
+    <ul>
+        <li>
+            <a href="{{url_for('listar')}}">Listar</a>
+        </li>
+        <li>
+            <a href="{{url_for('form')}}">Formulário</a>
+        </li>
+    </ul>
+
+    {% block conteudo %}
+    Texto Padrão
+    {% endblock %}
+
+</body>
+
+</html>
